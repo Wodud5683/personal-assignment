@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내배켐 최고 영화 평점 영화(개인과제)</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header onclick="window.location.reload();">
+        <h1>내배켐 최고 평점 영화 콜렉션</h1>
+    </header>
+
+
+    <div class="container mt-5">
+        <form id="searchForm" onsubmit="return false;">
+            <div class="row">
+                <div class="col">
+                    <div class="input-group">
+                        <label> 영화 검색 : </label>
+                        <input type="text" id="searchBar" class="form-control" placeholder="영화 제목을 검색하세요.">
+                        </input>
+                        <div class="searchbtn">
+                            <button class="btn btn-primary" type="submit" id="searchButton">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <section class="row row-cols-1 row-cols-md-3 g-4" id="movieList"></section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
