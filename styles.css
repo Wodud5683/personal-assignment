@@ -28,48 +28,92 @@ label {
 }
 
 #searchBar {
-    width: 300px; /* 원하는 너비 값으로 조절 */
-    padding: 10px; /* 입력 상자 주위에 내부 여백 설정 */
-    font-size: 16px; /* 글자 크기 설정 */
-    border: 1px solid #050505; /* 테두리 추가 */
-    border-radius: 10px; /* 모서리를 둥글게 처리 */
-    box-sizing: border-box; /* 너비와 높이에 패딩과 테두리를 포함 */
-    
+    width: 150px; /* 너비를 조정하여 크기를 줄입니다. */
+    padding: 10px; 
+    font-size: 16px; 
+    border: none; /* 기존의 테두리를 제거합니다. */
+    border-radius: 25px; /* 더 둥근 테두리를 추가합니다. */
+    box-sizing: border-box;    
+    background-color: #f5f5f5; /* 배경색을 부드러운 회색으로 변경합니다. */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 효과를 추가합니다. */
+    outline: none; /* 포커스 효과를 제거합니다. */
+}
+
+#searchBar::placeholder {
+    color: #888; /* placeholder의 색상을 회색으로 설정합니다. */
+}
+
+#searchBar:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* 포커스 시 더 강한 그림자 효과를 추가합니다. */
+}
+
+.searchbtn {
+    text-align: center; /* 버튼을 가운데 정렬합니다. */
+}
+
+.btn {
+    padding: 10px 20px; /* 버튼 내부 여백을 설정합니다. */
+    font-size: 16px; /* 버튼의 글꼴 크기를 설정합니다. */
+    border: none; /* 테두리를 제거합니다. */
+    border-radius: 50px; /* 더 둥근 테두리를 추가합니다. */
+    cursor: pointer; /* 마우스를 올렸을 때 포인터 모양을 변경합니다. */
+    transition: background-color 0.3s ease; /* 배경색 변경 시 부드러운 애니메이션을 적용합니다. */
+}
+
+.btn-primary {
+    background-color: #3cad95; /* 주요 동작을 나타내는 버튼의 배경색을 설정합니다. */
+    color: #fff; /* 버튼의 글자색을 설정합니다. */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* 호버 시 배경색을 어둡게 변경합니다. */
 }
 
 
-.card-img {
-    width: 260px;
-    height: 390px;
-    object-fit: cover;
-}
 
-
-.card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-
-}
-
-.card-text {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.card-Rating{
-    font-size: 1.2rem;
-    font-weight: bold;
-}
 .card {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
     margin: 20px;
     padding: 20px;
-    width: 300px;
-    justify-self: center;
-    background-color: rgb(216, 169, 111);
-    border-radius: 10px;
+    width: 300px; /* 카드의 너비를 일정하게 설정합니다. */
+    height: 1000px; /* 카드의 높이를 일정하게 설정합니다. */
+    background-color: #fff;
+    border-radius: 15px;
     cursor: pointer;
     user-select: none;
-    height: 1000px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%; /* 이미지를 카드의 가로 크기에 맞게 조정합니다. */
+    height: 60%; /* 이미지의 높이를 카드 높이의 일정 비율로 설정합니다. */
+    object-fit: cover; /* 이미지가 카드에 맞게 잘리지 않고 비율을 유지하도록 합니다. */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card .card-body {
+    padding: 10px 0;
+}
+
+.card .card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card .card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.card .card-Rating {
+    font-size: 16px;
+    color: #333;
 }
