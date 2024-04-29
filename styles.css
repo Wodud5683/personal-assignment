@@ -28,7 +28,7 @@ label {
 }
 
 #searchBar {
-    width: 150px; /* 너비를 조정하여 크기를 줄입니다. */
+    width: 150px;
     padding: 10px; 
     font-size: 16px; 
     border: none; /* 기존의 테두리를 제거합니다. */
